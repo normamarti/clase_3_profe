@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      th,
+      td {
+        border: 1px solid #333;
+        padding: 0.5em;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      #ejemplo2 {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>1er Ejemplo</h3>
+    <div>
+      <table>
+        <!-- Table para declarar tabla -->
+        <tr>
+          <!-- Primera fila -->
+          <td rowspan="2">1</td>
+          <td>2</td>
+          <!-- td = table data -->
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <h3>2do ejemplo</h3>
+
+      <table>
+        <thead id="ejemplo2">
+          <tr>
+            <th>Col 1</th>
+            <th>Col 2</th>
+            <th>Col 3</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>1</td>
+          <td rowspan="2">2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <h3>3er Ejemplo</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">Postre</th>
+            <th colspan="2">Cena</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

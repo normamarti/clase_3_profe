@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tablas</title>
+    <style>
+      th,
+      td {
+        border: 1px solid #000;
+        padding: 0.5em; /*1em = 12px*/
+      }
+      table {
+        border-collapse: collapse;
+      }
+      th {
+        background-color: #333;
+        color: white;
+      }
+
+      #frase {
+        color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Banners, Sliders, ETC -->
+    </header>
+
+    <main>
+      <!-- Contenido mas importante de tu sitio -->
+
+      <h3>
+        <a href="#frase">Ir a la frase</a>
+      </h3>
+    </main>
+
+    <!-- Tablas 
+    
+        Nos permiten organizar informacion con columnas y filas
+        como en una hoja de calculo
+
+        <table> Marca una tabla
+            <thead> Parte superior de la tabla (Semantica)
+                <tbody> Informacion de la tabla
+                    <tfoot> Pie de la tabla
+                         <tr> (Table Row) Creamos una fila
+                            <th> (Table Head) Son las cabeceras de la tabla
+                                 <td> (Table Data) Información a mostrar
+                                     
+                                    !ATRIBUTOS!
+
+                                    <a + atributo + "=" * "Valor">
+                                       * <a href="http://google.com">Ir ya! </a>
+
+                                    Son aquellas instrucciones que se lan a la etiqueta
+                                    dan funcionalidad y algunas son obligatorias
+
+                                    *colspan = Expande un dato por la cantidad de columnas especificadas
+                                    *rowspan = 
+
+
+                                    <caption> Etiqueta para darle titulo a la tabla
+                                        <colgroup> Permite agrupar elementos separados
+
+    -->
+
+    <table>
+      <caption>
+        Mi horario de estudio
+      </caption>
+
+      <colgroup>
+        <col span="2" />
+        <col style="background-color: yellow" />
+        <!-- Algoritmos -->
+      </colgroup>
+
+      <thead>
+        <tr>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Miercoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td colspan="2">HTML</td>
+          <td rowspan="2">Algoritmos</td>
+          <td>Photoshop</td>
+          <td>SEO</td>
+        </tr>
+
+        <tr>
+          <td>Python</td>
+          <td>CSS</td>
+          <td>PHP</td>
+          <td>Wordpress</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="4">Total de materias</td>
+          <td>8 Materias</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <footer></footer>
+  </body>
+</html>

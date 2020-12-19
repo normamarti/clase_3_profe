@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <style>
+      div {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Formularios -->
+
+    <!-- Elementos para que el usuario interactue con la web -->
+
+    <!-- Ejemplos:
+        
+        Iniciar sesión con una cuenta
+        Comprar en linea
+        Solicitar información, etc
+    
+        Aqui entra la utilidad de HTML
+        El billete se mueve a traves de los formularios
+    -->
+
+    <!-- Estructura basica de un formulario -->
+
+    <!-- 
+        Form: indica que existe un formulario
+        input: son los campos que usaremos en el formulario y hay muchos tipos:
+        Fechas
+        Colores
+        Numeros
+        Telefonos
+        Email
+
+        El default es texto y lo puedes omitir, porque es el default
+
+        *OJO: los inputs son elementos en Linea
+
+
+         * ATRIBUTOS input
+
+         1. Placeholder
+         ! Anotaciones importantes de input
+
+         Todo input deberá incluir el atributo name "OBLIGATORIO"
+         Deberá contener el atributo type, DEFAULT es text
+         *Toda etiqueta form, deberá conteneder el atributo action
+
+         PAra enviar un formulario hay 2 maneras de hacerlo
+
+         1. Boton (button)
+         2. input
+    -->
+
+    <!-- Etiquetas usadas en los formularios
+    
+    1. fieldset (Agrupa elementos de un formulario)
+      2. Legend (Titulo a tu separación)
+    -->
+
+    <!-- Campos personalizados: 
+    
+
+      !Cuidado con los widgets !!
+      ? Widgets son los botones que se muestran en navegador de manera predeterminada dependiendo
+      ? del tipo de input
+    atributos que se ingresan en el input:
+
+    1- Number (Compra de productos, cantidad de productos o algo similar)
+    
+    -->
+
+    <h3>Inicio de sesión</h3>
+
+    <article>
+      <fieldset>
+        <legend>Bienvenido</legend>
+
+        <form action="">
+          <div>
+            <label for="username">Ingrese usuario</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="fernandacr"
+            />
+          </div>
+          <div>
+            <label for="pass">Ingresa Contraseña</label>
+            <input type="text" id="pass" name="pass" placeholder="1234" />
+          </div>
+
+          <div>
+            <p>
+              ¿Olvidaste tu contraseña?
+              <a href="">Recuperala aqui</a>
+            </p>
+          </div>
+          <input type="submit" value="Enviar Ahora" />
+        </form>
+      </fieldset>
+    </article>
+
+    <!-- Text Area -->
+
+    <article>
+      <fieldset>
+        <legend>Envianos un mensaje</legend>
+
+        <form action="">
+          <div>
+            <label for="username">nombre</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="fernandacr"
+            />
+          </div>
+          <div>
+            <label for="pass">Asunto</label>
+            <input type="text" id="pass" name="pass" placeholder="1234" />
+          </div>
+
+          <div>
+            <textarea
+              name="mensaje"
+              id="mensaje"
+              cols="30"
+              rows="10"
+              placeholder="Tu mensaje"
+            ></textarea>
+          </div>
+
+          <input type="submit" value="Enviar Ahora" />
+        </form>
+      </fieldset>
+    </article>
+
+    <form action="">
+      <fieldset>
+        <legend>Number</legend>
+        <input type="number" />
+      </fieldset>
+      <fieldset>
+        <legend>Date</legend>
+        <input type="date" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Email</legend>
+        <input type="email" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Tel</legend>
+        <input type="tel" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Color</legend>
+        <input type="color" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Password</legend>
+        <input type="password" />
+      </fieldset>
+      <fieldset>
+        <legend>Range</legend>
+        <input type="range" min="0" max="6" step="2" value="0" />
+      </fieldset>
+
+      <!-- Opciones de selección -->
+
+      <!-- Checkboxes -->
+
+      <fieldset>
+        <legend>Tus pasatiempos</legend>
+        <div>
+          <input type="checkbox" id="gym" name="gym" />
+          <label for="gym">Gimnasio</label>
+        </div>
+        <div>
+          <input type="checkbox" id="comer" name="comer" />
+          <label for="comer">Comer</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Selecciona tu sexo</legend>
+        <div>
+          <label>
+            <input type="radio" name="gender" />
+            Hombre
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="radio" name="gender" />
+            Mujer
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="radio" name="gender" />
+            Prefiero no especificar
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Select o seleccion opcion -->
+
+      <!-- optgroup -->
+
+      <fieldset>
+        <legend>Selecciona tu pais</legend>
+
+        <select name="" id="">
+          <optgroup label="Norteamerica">
+            <option value="MX">Mexico</option>
+            <option value="USA">Estados Unidos</option>
+            <option value="CAN">Canada</option>
+          </optgroup>
+
+          <optgroup label="Centro y sur de America">
+            <option value="">Bolivia</option>
+            <option value="">Panama</option>
+            <option value="">Ecuador</option>
+            <option value="">Argentina</option>
+            <option value="">Colombia</option>
+          </optgroup>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>datalist</legend>
+        <!-- Datalist -->
+        <input type="list" list="country-list" />
+
+        <datalist id="country-list">
+          <option value="Mexico"></option>
+          <option value="Estados Unidos"></option>
+          <option value="Colombia"></option>
+          <option value="Turquia"></option>
+          <option value="India"></option>
+          <option value="Japon"></option>
+          <option value="China"></option>
+          <option value="Indonesia"></option>
+          <option value="Estanbul"></option>
+        </datalist>
+      </fieldset>
+
+      <button>Enviar</button>
+    </form>
+  </body>
+</html>

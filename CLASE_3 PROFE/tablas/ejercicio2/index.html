@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 2 de tablas</title>
+    <style>
+      th,
+      td {
+        border: 1px solid pink;
+        padding: 15px;
+      }
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Tabla simple -->
+
+    <table>
+      <caption>
+        Menu del dia
+      </caption>
+      <thead>
+        <tr>
+          <th id="des">Desayunos</th>
+          <th id="com">Comidas</th>
+          <th id="cen">Cenas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- FIla en ingles: se dice Row -->
+        <tr>
+          <td rowspan="2">Sandwich</td>
+          <td>Milanesa</td>
+          <td>Pato</td>
+        </tr>
+        <tr>
+          <td colspan="2">Salmon</td>
+        </tr>
+      </tbody>
+      <tfoot></tfoot>
+    </table>
+  </body>
+</html>
